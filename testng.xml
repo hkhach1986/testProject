@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testing Google Apps">
+    <test name="PositiveLoginConfig">
+        <parameter name="email" value="aaa@aaa.aaa"></parameter>
+        <parameter name="password" value="aaaaaa"></parameter>
+        <parameter name="assert" value="Grid Dynamics Screening Tool"></parameter>
+        <classes>
+            <class name="LoginTest"/>
+        </classes>
+    </test> <!-- Test -->
+    <test name="NegativeLoginConfig1">
+        <parameter name="email" value="currectEmail@gmail.com"></parameter>
+        <parameter name="password" value="Password"></parameter>
+        <parameter name="assert" value="error"></parameter>
+        <classes>
+            <class name="LoginTest"/>
+        </classes>
+    </test> <!-- Test -->
+    <test name="NegativeLoginConfig2">
+        <parameter name="email" value=""></parameter>
+        <parameter name="password" value="Password"></parameter>
+        <parameter name="assert" value="Log In"></parameter>
+        <classes>
+            <class name="LoginTest"/>
+        </classes>
+    </test>
+    <test name="NegativeLoginConfig3">
+        <parameter name="email" value="currectEmail@gmail.com"></parameter>
+        <parameter name="password" value=""></parameter>
+        <parameter name="assert" value="Log In"></parameter>
+        <classes>
+            <class name="LoginTest"/>
+        </classes>
+    </test>
+</suite> <!-- Suite -->
